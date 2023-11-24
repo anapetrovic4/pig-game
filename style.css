@@ -178,3 +178,7 @@ body {
   z-index: 2;
   margin-top: 15px;
 }
+
+.hidden {
+  display: flex;
+}
