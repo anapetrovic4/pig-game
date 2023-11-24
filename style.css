@@ -1,0 +1,180 @@
+/* Reset Styles */
+
+body,
+html {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(135deg, #be2f38, #76377e);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Container Styles */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  width: 100vw; /* Container zauzima 100% sirine trenutnog viewport-a */
+  max-width: 1000px; /* Max sirina je  1000px cak iako je sirina vw-a veca */
+  max-height: 600px;
+  position: relative;
+  justify-content: space-between;
+}
+
+/* Child Styles */
+
+.child1,
+.child2 {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.child1 {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-color: rgba(221, 176, 190, 255);
+}
+
+.child2 {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  left: 50%;
+  background-image: linear-gradient(135deg, #c37b91, #b07ba5);
+}
+
+/* Upper and Lower Container Styles */
+
+.upper-container,
+.lower-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: center;
+  width: 80%;
+  z-index: 2;
+}
+
+.upper-container {
+  align-items: flex-start;
+  margin-top: -20%;
+  margin-bottom: -90px;
+}
+
+/* Player Styles */
+
+.upper-container .score1 {
+  color: #c7365f;
+}
+
+.upper-container .player1,
+.upper-container .player2 {
+  text-align: center;
+  align-items: center;
+  font-size: 30px;
+  color: #313435;
+  padding: 15px 40px 40px;
+  width: 150px;
+}
+
+.player1 h2,
+.player2 h2 {
+  margin-top: 20px;
+  font-size: 55px;
+  font-weight: 100;
+  color: #c5476d;
+}
+
+/* Dice Styles */
+
+.dice img {
+  width: 100px;
+  height: auto;
+}
+
+.dice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  margin-top: 60px;
+  width: 200px;
+}
+
+/* Lower Container Styles */
+
+.lower-container {
+  margin-bottom: 50px;
+}
+
+.lower-container .current {
+  text-align: center;
+  padding: 15px 40px 40px;
+  border-radius: 15px;
+  background-color: #c5476d;
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+  width: 150px;
+}
+
+.current.first {
+  background-color: #c7365f;
+}
+
+.current-score {
+  font-size: 35px;
+}
+
+/* Button Styles */
+
+.button {
+  background: none;
+  color: w;
+  border: none;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font: inherit;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  outline: inherit;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #313435;
+}
+
+.lower-container .buttons {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  height: 100%;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.first .buttons {
+  align-self: center;
+  z-index: 2;
+}
+
+/* NEW GAME Button Styles */
+
+.buttons-up {
+  align-self: center;
+  z-index: 2;
+  margin-top: 15px;
+}
