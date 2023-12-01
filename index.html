@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>2Vezba Pig Game</title>
+    <script src="script.js"></script>
   </head>
   <body>
     <div class="container">
@@ -16,14 +17,14 @@
       <div class="upper-container">
         <div class="player1">
           <p>PLAYER 1</p>
-          <h2 class="score1">0</h2>
+          <h2 id='score1' class="score1">0</h2>
         </div>
         <div id="dice" class="dice hidden">
           <img id="diceImage" src="dice-1.png" alt="" />
         </div>
         <div class="player2">
           <p>PLAYER 2</p>
-          <h2 class="score2">0</h2>
+          <h2 id='score2' class="score2">0</h2>
         </div>
       </div>
 
@@ -42,6 +43,5 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
