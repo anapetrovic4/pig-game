@@ -69,6 +69,7 @@ currentScore = 0;
 document.getElementById(`current${currentPlayer}`).textContent = currentScore;
 
 //switch player 
+switchPlayer();
 
 });
 
@@ -89,6 +90,10 @@ function addSum(){
 }
 
 //Switch player
+function switchPlayer(){
+  currentPlayer = currentPlayer === 1 ? 2 : 1;
+  console.log(`Current player is: ${currentPlayer}`);
+}
 //Kad se klikne na hold, dodaj currentScore na global score
 //Kad se klikne na new game, resetuj sve na 0
 //Kad se dodje do 100, prikazi pobednika i onemoguci roll dice i hold
