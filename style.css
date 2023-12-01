@@ -95,10 +95,15 @@ body {
   color: #c5476d;
 }
 
+.player1 p,
+.player2 p {
+  padding-top: 13px
+}
+
 /* Dice Styles */
 
 .dice img {
-  width: 100px;
+  width: 80px;
   height: auto;
 }
 
@@ -107,7 +112,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 2;
-  margin-top: 60px;
+  margin-top: 130px;
   width: 200px;
 }
 
@@ -175,7 +180,7 @@ body {
 
 .buttons-up {
   align-self: center;
-  z-index: 2;
+  z-index: 10;
   margin-top: 15px;
 }
 

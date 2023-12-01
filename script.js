@@ -10,4 +10,4 @@ document.getElementById("rollDiceBtn").addEventListener("click", function () {
   document.getElementById("dice").style.visibility = "visible";
 });
 
-// Hold Button Click
+
