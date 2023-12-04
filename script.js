@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-
 "use strict";
+
+
 //Global variables
 let randomNumber;
 let sum = 0;
@@ -35,7 +36,6 @@ document.getElementById("newGameBtn").addEventListener("click", function () {
   document.getElementById("current2").textContent = 0;
   document.getElementById("score2").textContent = 0;
 
-
 });
 
 // Roll Dice Button Click
@@ -51,9 +51,6 @@ document.getElementById("rollDiceBtn").addEventListener("click", function () {
   document.getElementById("dice").style.visibility = "visible";
 
   addSum();
-
-
-
 });
 
 //Hold Dice Button Click
@@ -78,15 +75,18 @@ switchPlayer();
 
 //Switch player
 function switchPlayer(){
-  currentPlayer = currentPlayer === 1 ? 2 : 1;
-// Ukloni klasu "active" sa trenutnog igrača
-document.querySelector(`.child${currentPlayer === 1 ? 2 : 1}`).classList.remove('active');
-document.querySelector(`.child${currentPlayer === 1 ? 2 : 1}`).classList.add('notactive');
+ currentPlayer = currentPlayer === 1 ? 2 : 1;
 
+// Ukloni klasu "active" sa trenutnog igrača
+const currentChild = document.querySelector(`.child${currentPlayer === 1 ? 2 : 1}`);
+currentChild.classList.remove('active');
+currentChild.classList.add('notactive');
+console.log(`current player: ${currentPlayer}`);
 
 // Dodaj klasu "active" na sledećeg igrača
-document.querySelector(`.child${currentPlayer}`).classList.toggle('active');
-document.querySelector(`.child${currentPlayer}`).classList.toggle('notactive');
+const nextChild = document.querySelector(`.child${currentPlayer}`);
+nextChild.classList.remove('notactive');
+nextChild.classList.add('active');
 
 }
 
@@ -102,7 +102,8 @@ function addSum(){
   } else {
     currentScore = 0;
     document.getElementById(`current${currentPlayer}`).textContent = currentScore;
-    return;
+    
+    switchPlayer();
   }
 
 }

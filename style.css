@@ -45,7 +45,7 @@ body {
 }
 
 .notactive {
-  background-image: linear-gradient(135deg, #c37b91, #b07ba5) !important;
+ background-color: #c37b91;
 }
 
 
@@ -53,14 +53,13 @@ body {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   /* background-color: rgba(221, 176, 190, 255); */
-  /* background-color: black; */
 }
 
 .child2 {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   left: 50%;
-  /* background-image: linear-gradient(135deg, #c37b91, #b07ba5); */
+  /* background-color: #c37b91; */
 }
 
 /* Upper and Lower Container Styles */
