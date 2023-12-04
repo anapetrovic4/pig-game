@@ -27,15 +27,19 @@ function setDiceImage(randomNumber) {
 document.getElementById("newGameBtn").addEventListener("click", function () {
   document.getElementById("dice").style.visibility = "hidden";
 
+  document.getElementById('rollDiceBtn').hidden = false;
+  document.getElementById('holdBtn').hidden = false;
+
+
   globalScorePlayer1 = 0;
   globalScorePlayer2 = 0;
   currentScore = 0;
+  sum = 0;
 
   document.getElementById("current1").textContent = 0;
   document.getElementById("score1").textContent = 0;
   document.getElementById("current2").textContent = 0;
   document.getElementById("score2").textContent = 0;
-
 });
 
 // Roll Dice Button Click
@@ -65,11 +69,18 @@ document.getElementById('holdBtn').addEventListener('click', function(){
     document.getElementById('score2').textContent = globalScorePlayer2;
   }
 
+  if(globalScorePlayer1 >= 100 || globalScorePlayer2 >= 100){
+    console.log(`the game is over. winner is player ${currentPlayer}`);
+    document.getElementById('rollDiceBtn').hidden = true;
+    document.getElementById('holdBtn').hidden = true;
+    return;
+  }
+
   currentScore = 0;
   document.getElementById(`current${currentPlayer}`).textContent = currentScore;
 
-//switch player 
-switchPlayer();
+  //switch player 
+  switchPlayer();
 
 });
 
@@ -93,6 +104,7 @@ nextChild.classList.add('active');
 
 //Add sum
 function addSum(){
+  
   //If the random number is 1, reset the sum to 0 and switch players
   if(randomNumber !== 1){
     sum += randomNumber;
@@ -105,10 +117,7 @@ function addSum(){
     
     switchPlayer();
   }
-
 }
-
-//Kad se dodje do 100, prikazi pobednika i onemoguci roll dice i hold
 
 });
 
