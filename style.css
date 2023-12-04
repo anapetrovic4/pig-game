@@ -7,7 +7,7 @@ html {
   justify-content: center;
   align-items: center;
   font-family: "Nunito", sans-serif;
-  margin: 0;
+  margin: 0; /* Remove default margin */
 }
 
 body {
@@ -52,14 +52,12 @@ body {
 .child1 {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  /* background-color: rgba(221, 176, 190, 255); */
 }
 
 .child2 {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   left: 50%;
-  /* background-color: #c37b91; */
 }
 
 /* Upper and Lower Container Styles */
@@ -154,7 +152,7 @@ body {
 
 .button {
   background: none;
-  color: w;
+  color: white;
   border: none;
   padding-left: 25px;
   padding-right: 25px;
