@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 "use strict";
 
+document.getElementById('player1').classList.toggle('active');
+document.getElementById('player2').classList.toggle('notactive');
+
 
 //Global variables
 let randomNumber;
@@ -29,7 +32,6 @@ document.getElementById("newGameBtn").addEventListener("click", function () {
 
   document.getElementById('rollDiceBtn').hidden = false;
   document.getElementById('holdBtn').hidden = false;
-
 
   globalScorePlayer1 = 0;
   globalScorePlayer2 = 0;
@@ -98,7 +100,6 @@ console.log(`current player: ${currentPlayer}`);
 const nextChild = document.querySelector(`.child${currentPlayer}`);
 nextChild.classList.remove('notactive');
 nextChild.classList.add('active');
-
 }
 
 
